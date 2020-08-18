@@ -8,9 +8,7 @@ public class DisableBlockController : MonoBehaviour
 
     GameObject player1;
     GameObject player2;
-
-    private bool player1touches = false;
-    private bool player2touches = false;
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +23,8 @@ public class DisableBlockController : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
+    {        
+
         // higher danger level
         BlockController mainBc = gameObject.GetComponent<BlockController>();
         if (mainBc.scriptValueA > 0)
@@ -48,10 +46,9 @@ public class DisableBlockController : MonoBehaviour
         // reset block
         if (mainBc.scriptValueA == -1)
         {
-            if (collision.gameObject == player1) player1touches = true;
-            if (collision.gameObject == player2) player2touches = true;
-
-            if(player1touches && player2touches)
+            bool a = GetComponent<BoxCollider2D>().IsTouching(player1.GetComponent<BoxCollider2D>());
+            bool b = GetComponent<BoxCollider2D>().IsTouching(player2.GetComponent<BoxCollider2D>());
+            if (a && b)
             {
                 GameObject[] blocks = GameObject.FindGameObjectsWithTag("Block");
                 foreach (GameObject go in blocks)
@@ -65,26 +62,8 @@ public class DisableBlockController : MonoBehaviour
             }
         }
 
-        Debug.Log("Enter: player1 = " + player1touches + " / player2 = " + player2touches);
-
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
         
-        BlockController mainBc = gameObject.GetComponent<BlockController>();
-        if (mainBc.scriptValueA == -1)
-        {
-            if (collision.gameObject == player1) player1touches = false;
-            if (collision.gameObject == player2) player2touches = false;
-        }
 
-        Debug.Log("Exit: player1 = " + player1touches + " / player2 = " + player2touches);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
