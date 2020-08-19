@@ -95,7 +95,10 @@ public class PlayerMovement : MonoBehaviour
         {
             mayJump = player1.GetComponent<BoxCollider2D>().IsTouchingLayers(-1);
             if (mayJump)
+            {
                 v = jumpPower;
+                player1.GetComponent<AudioSource>().Play();
+            }
             jump1 = false;
         }
         
@@ -119,7 +122,10 @@ public class PlayerMovement : MonoBehaviour
         {
             mayJump = player2.GetComponent<BoxCollider2D>().IsTouchingLayers(-1);
             if (mayJump)
+            {
                 v = jumpPower;
+                player2.GetComponent<AudioSource>().Play();
+            }
             jump2 = false;
         }
 
