@@ -39,6 +39,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.48006982
       objectReference: {fileID: 0}
+    - target: {fileID: 587245437941297554, guid: 22fb41691a4d2934dac21e0371899279, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 2577475335835513309, guid: 22fb41691a4d2934dac21e0371899279, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 2.9736223
@@ -93,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8888859462566680572, guid: 22fb41691a4d2934dac21e0371899279, type: 3}
       propertyPath: m_Name
-      value: Block (5)
+      value: Danger Level Block
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22fb41691a4d2934dac21e0371899279, type: 3}
