@@ -20,6 +20,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            instance.transition.SetTrigger("End");
             return;
         }
 
@@ -47,10 +48,7 @@ public class LevelManager : MonoBehaviour
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene(buildIndex);
-
-        yield return new WaitForSeconds(0.3f);
-        transition.SetTrigger("End");
+        SceneManager.LoadScene(buildIndex);        
 
     }
 

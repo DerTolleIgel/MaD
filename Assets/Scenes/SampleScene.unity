@@ -2301,25 +2301,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
-    - target: {fileID: 8618975849109496685, guid: 7030754b8677746489d8cd40c2f92182, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618975849109496685, guid: 7030754b8677746489d8cd40c2f92182, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 400.312
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618975849109496685, guid: 7030754b8677746489d8cd40c2f92182, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618975849109496685, guid: 7030754b8677746489d8cd40c2f92182, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -922
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618975850541822799, guid: 7030754b8677746489d8cd40c2f92182, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 84
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7030754b8677746489d8cd40c2f92182, type: 3}
