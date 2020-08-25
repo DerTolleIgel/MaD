@@ -85,8 +85,8 @@ public class PlayerMovement : MonoBehaviour
         if (h < 0) player.transform.eulerAngles = new Vector3(0, 180, 0);
         v = rb.velocity.y;
         if (jump)
-        {
-            mayJump = player.GetComponent<BoxCollider2D>().IsTouchingLayers(9);
+        {            
+            mayJump = player.GetComponent<BoxCollider2D>().IsTouchingLayers(Physics2D.GetLayerCollisionMask(9));
             if (mayJump)
             {
                 v = jumpPower;
