@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e35208bc0d3bfb43b551c9a5ea62bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionTime: 1.1
   levels:
   - buildIndex: 0
     name: map1
