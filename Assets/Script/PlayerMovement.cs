@@ -28,9 +28,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb1;
     private Rigidbody2D rb2;
 
-
-
-
     private void Awake()
     {
         controls = new PlayerControls();
@@ -64,83 +61,50 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        //bool mayJump = false;
-        //if (jump1)
-        //{
-        //    mayJump = player1.GetComponent<BoxCollider2D>().IsTouchingLayers(-1);
-        //    if (mayJump)
-        //    player1.GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpPower;
-        //    jump1 = false;
-        //}
-        //if (jump2)
-        //{
-        //    mayJump = player2.GetComponent<BoxCollider2D>().IsTouchingLayers(-1);
-        //    if (mayJump)
-        //    player2.GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpPower;
-        //    jump2 = false;
-        //}
+
     }
 
     void FixedUpdate()
     {
+        jump(ref player1, ref move1, ref rb1, ref jump1, ref jumpdown1);
+        jump(ref player2, ref move2, ref rb2, ref jump2, ref jumpdown2);
+
+    }
+
+    /**
+     * TODO: write a comment
+    **/ 
+    private void jump(ref GameObject player, ref Vector2 move, ref Rigidbody2D rb, ref bool jump, ref bool jumpdown)
+    {
         bool mayJump;
         float h;
         float v;
-        //player 1
-        h = move1.x;
-        if (h > 0) player1.transform.eulerAngles = new Vector3(0, 0, 0);
-        if (h < 0) player1.transform.eulerAngles = new Vector3(0, 180, 0);
-        v = rb1.velocity.y;
-        if (jump1)
+
+        h = move.x;
+        if (h > 0) player.transform.eulerAngles = new Vector3(0, 0, 0);
+        if (h < 0) player.transform.eulerAngles = new Vector3(0, 180, 0);
+        v = rb.velocity.y;
+        if (jump)
         {
-            mayJump = player1.GetComponent<BoxCollider2D>().IsTouchingLayers(-1);
+            mayJump = player.GetComponent<BoxCollider2D>().IsTouchingLayers(9);
             if (mayJump)
             {
                 v = jumpPower;
-                player1.GetComponent<AudioSource>().Play();
+                player.GetComponent<AudioSource>().Play();
             }
-            jump1 = false;
+            jump = false;
         }
-        
 
         if (v < 0)
         {
             v += Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        } else if (!jumpdown1)
+        }
+        else if (!jumpdown)
         {
             v += Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
         Vector2 dir = new Vector2(h * speed, v);
-        rb1.velocity = dir;
-
-        // player 2        
-        h = move2.x;
-        if (h > 0) player2.transform.eulerAngles = new Vector3(0, 0, 0);
-        if (h < 0) player2.transform.eulerAngles = new Vector3(0, 180, 0);
-        v = rb2.velocity.y;
-        if (jump2)
-        {
-            mayJump = player2.GetComponent<BoxCollider2D>().IsTouchingLayers(-1);
-            if (mayJump)
-            {
-                v = jumpPower;
-                player2.GetComponent<AudioSource>().Play();
-            }
-            jump2 = false;
-        }
-
-        if (v < 0)
-        {
-            v += Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }
-        else if (!jumpdown2)
-        {
-            v += Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
-
-        dir = new Vector2(h * speed, v);
-        rb2.velocity = dir;
-
+        rb.velocity = dir;
     }
 
 }
