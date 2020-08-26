@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    static AudioManager get()
+    public static AudioManager get()
     {
         return instance;
     }

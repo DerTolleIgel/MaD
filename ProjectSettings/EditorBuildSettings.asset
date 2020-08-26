@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DemoCamera.unity
     guid: 171c4313304ee2844874a71b25f48975
+  - enabled: 1
+    path: Assets/Scenes/PuzzleTimer.unity
+    guid: 3399c9b811b9a15428dd4334e4e89523
   m_configObjects: {}

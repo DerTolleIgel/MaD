@@ -50,6 +50,8 @@ MonoBehaviour:
     name: map1
   - buildIndex: 1
     name: map2
+  - buildIndex: 2
+    name: map3
   transition: {fileID: 8618975850541822798}
 --- !u!1 &8618975849109496686
 GameObject:

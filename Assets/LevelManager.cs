@@ -16,15 +16,7 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null) instance = this;
-        else
-        {
-            Destroy(gameObject);
-            //instance.transition.SetTrigger("End");
-            return;
-        }
-
-        //DontDestroyOnLoad(gameObject);
+        instance = this;        
     }
 
     public void LoadLevel(string levelName)

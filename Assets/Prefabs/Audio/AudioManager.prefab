@@ -50,3 +50,21 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: thunder1
+    clip: {fileID: 8300000, guid: e9d79ecb612ad544bb79a86064880bb8, type: 3}
+    volume: 0.372
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: thunder2
+    clip: {fileID: 8300000, guid: 54a7d0478fd68754c8ad1bd4251f9275, type: 3}
+    volume: 0.372
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: thunder3
+    clip: {fileID: 8300000, guid: d6728004bd7012749aad5edb90fd6b38, type: 3}
+    volume: 0.372
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
