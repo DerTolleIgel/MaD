@@ -31,7 +31,7 @@ public class EventBlockLevelChangeController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject == player1) p1entered = true;
-        if (collision.gameObject == player1) p2entered = true;
+        if (collision.gameObject == player2) p2entered = true;
 
         if (p1entered && p2entered)
         {
@@ -42,6 +42,6 @@ public class EventBlockLevelChangeController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject == player1) p1entered = false;
-        if (collision.gameObject == player1) p2entered = false;
+        if (collision.gameObject == player2) p2entered = false;
     }
 }
