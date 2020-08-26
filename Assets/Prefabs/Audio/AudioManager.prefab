@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
+  - name: songSilence
+    clip: {fileID: 8300000, guid: 9d1662d520cb86c4889d73b36cd1a450, type: 3}
+    volume: 0.372
+    pitch: 1
+    loop: 1
     source: {fileID: 0}

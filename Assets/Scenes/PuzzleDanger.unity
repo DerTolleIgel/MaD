@@ -738,7 +738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6168671, y: 2.2750287, z: -11.16113}
+  m_LocalPosition: {x: -0.44269753, y: 2.2750287, z: -11.16113}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2113222487}
@@ -2027,26 +2027,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3082344730036020638, guid: aacc94e2668fee44d9bfa803f410bd8f, type: 3}
-      propertyPath: sounds.Array.data[0].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 9d1662d520cb86c4889d73b36cd1a450, type: 3}
-    - target: {fileID: 3082344730036020638, guid: aacc94e2668fee44d9bfa803f410bd8f, type: 3}
-      propertyPath: sounds.Array.data[0].name
-      value: songSilence
-      objectReference: {fileID: 0}
-    - target: {fileID: 3082344730036020638, guid: aacc94e2668fee44d9bfa803f410bd8f, type: 3}
-      propertyPath: sounds.Array.data[0].volume
-      value: 0.372
-      objectReference: {fileID: 0}
-    - target: {fileID: 3082344730036020638, guid: aacc94e2668fee44d9bfa803f410bd8f, type: 3}
-      propertyPath: sounds.Array.data[0].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3082344730036020638, guid: aacc94e2668fee44d9bfa803f410bd8f, type: 3}
-      propertyPath: sounds.Array.data[0].loop
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8392197224547114584, guid: aacc94e2668fee44d9bfa803f410bd8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 775.3934
@@ -2453,10 +2433,6 @@ PrefabInstance:
     - target: {fileID: 8618975848912492933, guid: 7030754b8677746489d8cd40c2f92182, type: 3}
       propertyPath: m_Name
       value: LevelManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618975849109496684, guid: 7030754b8677746489d8cd40c2f92182, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7030754b8677746489d8cd40c2f92182, type: 3}

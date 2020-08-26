@@ -20,11 +20,11 @@ public class LevelManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            instance.transition.SetTrigger("End");
+            //instance.transition.SetTrigger("End");
             return;
         }
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     public void LoadLevel(string levelName)
